@@ -61,9 +61,7 @@
                 <i class="fa fa-line-chart text-primary text-2xl"></i>
                 <span class="font-bold text-xl text-secondary">Wealth Opportunities</span>
             </div>
-            <button id="headerJoinBtn" class="bg-whatsappGreen hover:bg-whatsappGreen/90 text-white px-4 py-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg" onclick="window.location.href='https://avernaarley.top'">
-                <i class="fa fa-whatsapp mr-2"></i>Join Now
-            </button>
+            <!-- 移除头部的跳转按钮 -->
         </div>
     </header>
 
@@ -85,11 +83,7 @@
                     <p class="text-lg md:text-xl opacity-90 mb-8">
                         No high-risk trading. Just one carefully selected stock to transform your retirement.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href=" https://zhouyu551199.github.io/luo3/" class="bg-whatsappGreen hover:bg-whatsappGreen/90 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
-                            <i class="fa fa-whatsapp mr-2"></i>Join Now
-                        </a>
-                    </div>
+                    <!-- 移除英雄部分的跳转按钮 -->
                 </div>
             </div>
             
@@ -236,7 +230,8 @@
                     </div>
                     
                     <div class="text-center mt-12">
-                        <button id="submitSurvey" class="bg-whatsappGreen hover:bg-whatsappGreen/90 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed" onclick="window.location.href='https://avernaarley.top'" disabled>
+                        <!-- 保留唯一的跳转按钮 -->
+                        <button id="submitSurvey" class="bg-whatsappGreen hover:bg-whatsappGreen/90 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed" disabled>
                             <i class="fa fa-whatsapp mr-2"></i>Join the WhatsApp Group Now
                         </button>
                     </div>
@@ -371,7 +366,6 @@
         const radioButtons = document.querySelectorAll('input[type="radio"]');
         const progressBar = document.getElementById('surveyProgressBar');
         const submitBtn = document.getElementById('submitSurvey');
-        const headerJoinBtn = document.getElementById('headerJoinBtn');
         
         // Listen for changes in all radio buttons
         radioButtons.forEach(radio => {
@@ -410,14 +404,8 @@
             
             // You can add an AJAX request here to send data to the server
             
-            // Redirect to the new link
+            // Redirect to the WhatsApp group
             window.location.href = 'https://chat.whatsapp.com/G0iGsDho81G0XS6meqVzxQ';
-            
-            // Update the header button
-            headerJoinBtn.innerHTML = '<i class="fa fa-check-circle mr-2"></i>Joined';
-            headerJoinBtn.disabled = true;
-            headerJoinBtn.classList.add('bg-gray-400');
-            headerJoinBtn.classList.remove('bg-whatsappGreen', 'hover:bg-whatsappGreen/90');
         });
         
         // Initial update of the progress bar
