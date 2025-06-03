@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roaring Investor Community | Join the Movement</title>
+    <title>$1 Million in 3 Months | Low-Risk Stock Investment Strategy</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
@@ -15,21 +15,17 @@
             theme: {
                 extend: {
                     colors: {
-                        whatsappGreen: '#25D366', // WhatsApp主色调
-                        whatsappDark: '#128C7E', // WhatsApp深色调
-                        whatsappLight: '#DCF8C6', // WhatsApp浅色调
-                        whatsappBlue: '#34B7F1', // WhatsApp蓝色（用于链接等）
-                        secondary: '#1A1A2E', // 深蓝色背景
-                        neutral: '#F5F5F5', // 浅色背景
-                        dark: '#0F3460', // 深色背景
+                        primary: '#e63946',
+                        secondary: '#1d3557',
+                        accent: '#457b9d',
+                        neutral: '#f1faee',
+                        success: '#2a9d8f',
+                        whatsappGreen: '#25D366',
+                        danger: '#ff3333'
                     },
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
                     },
-                    boxShadow: {
-                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.1)',
-                        'card-hover': '0 20px 40px -5px rgba(0, 0, 0, 0.15)',
-                    }
                 }
             }
         }
@@ -47,51 +43,37 @@
             .text-shadow-lg {
                 text-shadow: 0 4px 8px rgba(0,0,0,0.25);
             }
-            .animate-float {
-                animation: float 3s ease-in-out infinite;
+            .animate-pulse-slow {
+                animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
             }
-            .card-hover {
-                transition: all 0.3s ease;
+            .animate-pulse-fast {
+                animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
             }
-            .card-hover:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+            .animate-shake {
+                animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
             }
-            @keyframes float {
-                0% { transform: translateY(0px); }
-                50% { transform: translateY(-10px); }
-                100% { transform: translateY(0px); }
+            .btn-whatsapp {
+                @apply bg-whatsappGreen hover:bg-whatsappGreen/90 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2;
             }
-            .scale-hover {
-                transition: transform 0.3s ease;
-            }
-            .scale-hover:hover {
-                transform: scale(1.03);
-            }
-            .bg-gradient-hero {
-                background: linear-gradient(135deg, #0F3460 0%, #1A1A2E 100%);
-            }
-            .bg-glass {
-                background: rgba(255, 255, 255, 0.8);
-                backdrop-filter: blur(10px);
-            }
-            .bg-whatsapp-gradient {
-                background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            @keyframes shake {
+                10%, 90% { transform: translateX(-1px); }
+                20%, 80% { transform: translateX(2px); }
+                30%, 50%, 70% { transform: translateX(-3px); }
+                40%, 60% { transform: translateX(3px); }
             }
         }
     </style>
 </head>
 <body class="bg-gradient-to-br from-neutral to-white font-sans text-secondary">
     <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 bg-glass z-50 shadow-sm transition-all duration-300">
+    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <i class="fa fa-line-chart text-whatsappGreen text-2xl"></i>
-                <span class="font-bold text-xl text-secondary">Roaring Investor</span>
+                <i class="fa fa-line-chart text-primary text-2xl"></i>
+                <span class="font-bold text-xl text-secondary">Wealth Opportunities</span>
             </div>
-            <!-- 新增导航按钮 -->
-            <a href="#survey" class="bg-whatsapp-gradient hover:opacity-90 text-white font-bold px-6 py-2 rounded-full transition-opacity duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 scale-hover">
-                Join Our WhatsApp Group Now
+            <a href="#join-now" class="btn-whatsapp py-2 px-4 text-sm">
+                <i class="fa fa-whatsapp"></i>Join Now
             </a>
         </div>
     </header>
@@ -99,37 +81,54 @@
     <!-- Main Content -->
     <main class="pt-16 pb-20">
         <!-- Hero Section -->
-        <section class="relative bg-gradient-hero text-white overflow-hidden">
-            <div class="absolute inset-0 bg-[url('https://yt3.googleusercontent.com/JBS3rQulAAZrXmT4FhShvBe1nLKy1QZ00svnIh3A5yhMLGTC-gxph3WvmgSBq1MKRvgMaEAd=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj')] bg-cover bg-center opacity-30"></div>
+        <section class="relative bg-secondary text-white overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://picsum.photos/id/1025/800/600')] bg-cover bg-center opacity-20"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-secondary/80 to-secondary"></div>
             
-            <!-- Animated particles -->
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute w-64 h-64 rounded-full bg-whatsappGreen/10 -top-10 -left-10 animate-float"></div>
-                <div class="absolute w-40 h-40 rounded-full bg-whatsappBlue/10 top-1/4 right-1/4 animate-float" style="animation-delay: 1s"></div>
-                <div class="absolute w-32 h-32 rounded-full bg-white/5 bottom-1/4 left-1/3 animate-float" style="animation-delay: 2s"></div>
-            </div>
-            
-            <div class="container mx-auto px-4 py-24 md:py-32 relative z-10">
-                <div class="max-w-4xl mx-auto text-center">
-                    <div class="mb-8 animate-float">
-                        <div class="relative w-40 h-40 mx-auto">
-                            <div class="absolute inset-0 rounded-full bg-whatsapp-gradient opacity-50 animate-pulse"></div>
-                            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSaoNOD_rvwx_P555obqi0PJZU7BAWNC9OKq2VT-UK1JAdme_qDw_rrOnZpIsgBp48Nn423yi68hJJAoh4UZ_qrQA" alt="Roaring Kitty" class="w-40 h-40 rounded-full object-cover mx-auto border-4 border-white shadow-2xl relative z-10">
-                        </div>
-                    </div>
-                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-shadow-lg mb-6">
-                        Invest Like <span class="text-whatsappGreen">Roaring Kitty</span>
+            <div class="container mx-auto px-4 py-20 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <span class="inline-block px-4 py-2 bg-primary/90 rounded-full text-white text-sm font-semibold mb-6">
+                        <i class="fa fa-exclamation-circle mr-1"></i>Exclusive Limited-Time Offer
+                    </span>
+                    
+                    <!-- 优化标题排版 -->
+                    <h1 class="text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-tight text-shadow-lg mb-6">
+                        <span class="block">Reach $1 Million in</span>
+                        <span class="text-primary">3 Months</span>
+                        <span class="block text-[clamp(1.8rem,3vw,2.5rem)] mt-2">with Our Proven Strategy</span>
                     </h1>
-                    <p class="text-xl md:text-2xl opacity-90 mb-10 max-w-3xl mx-auto">
-                        Join thousands of investors learning the strategies that made Wall Street history.
+                    
+                    <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+                        No high-risk trading. Just one carefully selected stock to transform your retirement portfolio.
                     </p>
+                    
+                    <!-- 紧凑倒计时显示 -->
+                    <div class="mb-8 relative">
+                        <h3 class="text-xl font-bold mb-2">Limited Time Free Access:</h3>
+                        <div id="countdown" class="text-danger text-4xl md:text-5xl font-bold animate-pulse-slow">
+                            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                        </div>
+                        <p id="countdown-message" class="mt-2 text-sm opacity-80 animate-pulse-slow">
+                            Join now for free - after this time, membership will cost $99
+                        </p>
+                    </div>
+                    
+                    <!-- 主行动号召按钮 -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center" id="join-now">
+                        <a href="https://chat.whatsapp.com/KUfG9oEveTq5Zy4JuhgkUc" target="_blank" class="btn-whatsapp group">
+                            <i class="fa fa-whatsapp"></i>Join Our WhatsApp Group Now
+                            <span class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Click to join instantly
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
             
             <!-- Wave Separator -->
             <div class="absolute bottom-0 left-0 right-0">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full h-auto">
-                    <path fill="#f5f5f5" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+                    <path fill="#f1faee" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
                 </svg>
             </div>
         </section>
@@ -140,118 +139,58 @@
                 <div class="max-w-3xl mx-auto">
                     <div class="text-center mb-12">
                         <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">
-                            Roaring Kitty's Investment Philosophy
+                            This Isn't an Ordinary Investment Strategy
                         </h2>
-                        <p class="text-whatsappDark text-lg max-w-2xl mx-auto">
-                            Transparency, education, and community-driven investment strategies.
+                        <p class="text-accent text-lg max-w-2xl mx-auto">
+                            Crafted by senior Wall Street analysts, our low-risk, high-return strategy has been proven in real-world scenarios.
                         </p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Feature 1 -->
-                        <div class="bg-white rounded-2xl shadow-card p-6 md:p-8 card-hover">
-                            <div class="bg-whatsappLight/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                                <i class="fa fa-book text-whatsappGreen text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-secondary mb-3">Education First</h3>
-                            <p class="text-gray-600">
-                                Learn fundamental analysis, technical trading, and risk management strategies from someone who's been there.
-                            </p>
-                        </div>
-                        
-                        <!-- Feature 2 -->
-                        <div class="bg-white rounded-2xl shadow-card p-6 md:p-8 card-hover">
-                            <div class="bg-whatsappLight/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                                <i class="fa fa-users text-whatsappGreen text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-secondary mb-3">Community Driven</h3>
-                            <p class="text-gray-600">
-                                Join a community of like-minded investors sharing insights, research, and strategies.
-                            </p>
-                        </div>
-                        
-                        <!-- Feature 3 -->
-                        <div class="bg-white rounded-2xl shadow-card p-6 md:p-8 card-hover">
-                            <div class="bg-whatsappLight/50 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                                <i class="fa fa-line-chart text-whatsappGreen text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-secondary mb-3">Long-Term Vision</h3>
-                            <p class="text-gray-600">
-                                Focus on sustainable growth and value investing, not short-term market fluctuations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Survey Section -->
-        <section id="survey" class="py-16 bg-neutral">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto">
-                    <div class="text-center mb-12">
-                        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">
-                            Join the Roaring Community
-                        </h2>
-                        <p class="text-whatsappDark text-lg max-w-2xl mx-auto mb-8">
-                            Complete this short survey to gain access to exclusive insights and join our community.
-                        </p>
-                        <div id="surveyProgress" class="w-full bg-gray-200 rounded-full h-2.5 mb-8">
-                            <div id="surveyProgressBar" class="bg-whatsapp-gradient h-2.5 rounded-full" style="width: 0%"></div>
-                        </div>
                     </div>
                     
                     <div class="space-y-8">
-                        <!-- Question 1 -->
-                        <div class="bg-white rounded-2xl shadow-card p-6 md:p-8 card-hover">
-                            <h3 class="text-xl font-bold text-secondary mb-3">Do you currently own stocks?</h3>
-                            <div class="space-y-3">
-                                <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:border-whatsappGreen hover:bg-whatsappLight/30 cursor-pointer transition-all">
-                                    <input type="radio" name="stocks" value="Yes" class="mr-3 h-5 w-5 text-whatsappGreen focus:ring-whatsappGreen" required>
-                                    <span>Yes</span>
-                                </label>
-                                <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:border-whatsappGreen hover:bg-whatsappLight/30 cursor-pointer transition-all">
-                                    <input type="radio" name="stocks" value="No" class="mr-3 h-5 w-5 text-whatsappGreen focus:ring-whatsappGreen">
-                                    <span>No</span>
-                                </label>
+                        <!-- Feature 1 -->
+                        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/10 p-4 rounded-full text-primary">
+                                    <i class="fa fa-shield text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-secondary mb-3">Low-Risk Strategy</h3>
+                                    <p class="text-gray-600">
+                                        Avoid high-risk financial derivatives like options and futures. Achieve stable growth through a carefully chosen stock.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         
-                        <!-- Question 2 -->
-                        <div class="bg-white rounded-2xl shadow-card p-6 md:p-8 card-hover">
-                            <h3 class="text-xl font-bold text-secondary mb-3">Do you prefer short-term or long-term stock holding?</h3>
-                            <div class="space-y-3">
-                                <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:border-whatsappGreen hover:bg-whatsappLight/30 cursor-pointer transition-all">
-                                    <input type="radio" name="holding" value="ShortTerm" class="mr-3 h-5 w-5 text-whatsappGreen focus:ring-whatsappGreen" required>
-                                    <span>Short-term holding</span>
-                                </label>
-                                <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:border-whatsappGreen hover:bg-whatsappLight/30 cursor-pointer transition-all">
-                                    <input type="radio" name="holding" value="LongTerm" class="mr-3 h-5 w-5 text-whatsappGreen focus:ring-whatsappGreen">
-                                    <span>Long-term holding</span>
-                                </label>
+                        <!-- Feature 2 -->
+                        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/10 p-4 rounded-full text-primary">
+                                    <i class="fa fa-line-chart text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-secondary mb-3">Professional Analysis</h3>
+                                    <p class="text-gray-600">
+                                        Selected by an analyst team with over 10 years of Wall Street experience, combining both technical and fundamental analysis.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         
-                        <!-- Question 3 -->
-                        <div class="bg-white rounded-2xl shadow-card p-6 md:p-8 card-hover">
-                            <h3 class="text-xl font-bold text-secondary mb-3">How interested are you in participating in a stock investment community to share experiences and insights with other investors?</h3>
-                            <div class="space-y-3">
-                                <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:border-whatsappGreen hover:bg-whatsappLight/30 cursor-pointer transition-all">
-                                    <input type="radio" name="interest" value="Very" class="mr-3 h-5 w-5 text-whatsappGreen focus:ring-whatsappGreen" required>
-                                    <span>Very interested</span>
-                                </label>
-                                <label class="flex items-center p-4 border border-gray-200 rounded-xl hover:border-whatsappGreen hover:bg-whatsappLight/30 cursor-pointer transition-all">
-                                    <input type="radio" name="interest" value="Somewhat" class="mr-3 h-5 w-5 text-whatsappGreen focus:ring-whatsappGreen">
-                                    <span>Somewhat interested</span>
-                                </label>
+                        <!-- Feature 3 -->
+                        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/10 p-4 rounded-full text-primary">
+                                    <i class="fa fa-users text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-secondary mb-3">Community Support</h3>
+                                    <p class="text-gray-600">
+                                        Join a community of over 2000 investors to seize market opportunities and share investment insights.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="text-center mt-12">
-                        <button id="submitSurvey" class="bg-whatsapp-gradient hover:opacity-90 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed scale-hover" disabled>
-                            <i class="fa fa-rocket mr-2"></i>Join the Community
-                        </button>
                     </div>
                 </div>
             </div>
@@ -262,21 +201,21 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">
-                        Community Success Stories
+                        Real Investor Stories
                     </h2>
-                    <p class="text-whatsappDark text-lg max-w-2xl mx-auto">
-                        See how our members have transformed their investment journey.
+                    <p class="text-accent text-lg max-w-2xl mx-auto">
+                        See what investors who have joined our community think of our strategy.
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Testimonial 1 -->
-                    <div class="bg-neutral rounded-2xl shadow-card p-6 md:p-8 card-hover">
+                    <div class="bg-neutral rounded-2xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center mb-4">
-                            <img src="https://picsum.photos/id/1012/100/100" alt="Community Member" class="w-14 h-14 rounded-full object-cover mr-4">
+                            <img src="https://picsum.photos/id/1005/100/100" alt="Investor Photo" class="w-14 h-14 rounded-full object-cover mr-4">
                             <div>
-                                <h4 class="font-bold text-secondary">Alex J.</h4>
-                                <p class="text-sm text-gray-500">Software Engineer</p>
+                                <h4 class="font-bold text-secondary">Mr. Zhang</h4>
+                                <p class="text-sm text-gray-500">Corporate Executive</p>
                             </div>
                         </div>
                         <div class="mb-3 flex text-warning">
@@ -287,17 +226,17 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <p class="text-gray-600 italic">
-                            "Roaring Kitty's approach to investing opened my eyes to long-term value. I've grown my portfolio by 47% in just 10 months!"
+                            "After joining the group for 3 months and following the strategy, I've achieved a return of over 50%. What impressed me most is that there was almost no risk involved, nothing like traditional stock investment."
                         </p>
                     </div>
                     
                     <!-- Testimonial 2 -->
-                    <div class="bg-neutral rounded-2xl shadow-card p-6 md:p-8 card-hover">
+                    <div class="bg-neutral rounded-2xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center mb-4">
-                            <img src="https://picsum.photos/id/1006/100/100" alt="Community Member" class="w-14 h-14 rounded-full object-cover mr-4">
+                            <img src="https://picsum.photos/id/1006/100/100" alt="Investor Photo" class="w-14 h-14 rounded-full object-cover mr-4">
                             <div>
-                                <h4 class="font-bold text-secondary">Sarah L.</h4>
-                                <p class="text-sm text-gray-500">Marketing Specialist</p>
+                                <h4 class="font-bold text-secondary">Ms. Li</h4>
+                                <p class="text-sm text-gray-500">Freelancer</p>
                             </div>
                         </div>
                         <div class="mb-3 flex text-warning">
@@ -308,16 +247,16 @@
                             <i class="fa fa-star-half-o"></i>
                         </div>
                         <p class="text-gray-600 italic">
-                            "As a beginner, I was overwhelmed. The community's support and educational resources have been invaluable. I'm finally investing with confidence!"
+                            "As a beginner in investing, I was always worried about risks. This strategy is very straightforward and easy to understand. With professional guidance, I can invest with confidence. My retirement account has now grown by 30%."
                         </p>
                     </div>
                     
                     <!-- Testimonial 3 -->
-                    <div class="bg-neutral rounded-2xl shadow-card p-6 md:p-8 card-hover">
+                    <div class="bg-neutral rounded-2xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300">
                         <div class="flex items-center mb-4">
-                            <img src="https://picsum.photos/id/1025/100/100" alt="Community Member" class="w-14 h-14 rounded-full object-cover mr-4">
+                            <img src="https://picsum.photos/id/1012/100/100" alt="Investor Photo" class="w-14 h-14 rounded-full object-cover mr-4">
                             <div>
-                                <h4 class="font-bold text-secondary">Michael T.</h4>
+                                <h4 class="font-bold text-secondary">Mr. Wang</h4>
                                 <p class="text-sm text-gray-500">Retired Teacher</p>
                             </div>
                         </div>
@@ -329,37 +268,37 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <p class="text-gray-600 italic">
-                            "I've learned more in this community than in years of self-study. The focus on fundamentals and long-term growth has transformed my retirement strategy."
+                            "I'm retired and need a stable income. This strategy not only keeps my funds safe but also brings unexpected returns. Now I can enjoy my retirement more peacefully."
                         </p>
                     </div>
                 </div>
                 
                 <!-- Add average data -->
-                <div class="mt-16 bg-whatsapp-gradient rounded-2xl p-8 text-white shadow-xl overflow-hidden relative">
-                    <!-- Background pattern -->
-                    <div class="absolute inset-0 opacity-10">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <pattern id="pattern-circles" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
-                                <circle id="pattern-circle" cx="20" cy="20" r="1.5" fill="#ffffff"></circle>
-                            </pattern>
-                            <rect id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
-                        </svg>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center relative z-10">
+                <div class="mt-16 bg-gradient-to-r from-secondary to-accent rounded-2xl p-8 text-white shadow-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                         <div class="p-4">
-                            <div class="text-4xl font-bold mb-2">35%</div>
-                            <p class="text-white/80">Average Annual Return</p>
+                            <div class="text-4xl font-bold mb-2">42%</div>
+                            <p class="text-white/80">Average 3-Month Return</p>
                         </div>
                         <div class="p-4">
-                            <div class="text-4xl font-bold mb-2">15,000+</div>
-                            <p class="text-white/80">Community Members</p>
+                            <div class="text-4xl font-bold mb-2">2,500+</div>
+                            <p class="text-white/80">Active Community Members</p>
                         </div>
                         <div class="p-4">
-                            <div class="text-4xl font-bold mb-2">98%</div>
-                            <p class="text-white/80">Satisfaction Rate</p>
+                            <div class="text-4xl font-bold mb-2">96%</div>
+                            <p class="text-white/80">Member Satisfaction</p>
                         </div>
                     </div>
+                </div>
+                
+                <!-- 底部行动号召按钮 -->
+                <div class="mt-16 text-center">
+                    <a href="#join-now" class="btn-whatsapp inline-flex relative group">
+                        <i class="fa fa-whatsapp"></i>Join Our WhatsApp Group Now
+                        <span class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Click to join instantly
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -379,65 +318,98 @@
             }
         });
         
-        // Smooth scrolling
+        // Smooth scrolling with better positioning
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                if (targetId === '#join-now') {
+                    // 滚动到主行动号召按钮，并使其居中
+                    const joinNowElement = document.getElementById('join-now');
+                    if (joinNowElement) {
+                        const targetPosition = joinNowElement.getBoundingClientRect().top + window.pageYOffset - (window.innerHeight / 2) + (joinNowElement.offsetHeight / 2);
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // 添加点击效果
+                        const btn = joinNowElement.querySelector('a');
+                        if (btn) {
+                            btn.classList.add('scale-105', 'animate-shake');
+                            setTimeout(() => {
+                                btn.classList.remove('scale-105', 'animate-shake');
+                            }, 500);
+                        }
+                    }
+                } else {
+                    // 其他锚点正常滚动
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
-        
-        // Survey progress bar
-        const radioButtons = document.querySelectorAll('input[type="radio"]');
-        const progressBar = document.getElementById('surveyProgressBar');
-        const submitBtn = document.getElementById('submitSurvey');
-        
-        // Listen for changes in all radio buttons
-        radioButtons.forEach(radio => {
-            radio.addEventListener('change', updateProgress);
-        });
-        
-        // Update the progress bar and submit button status
-        function updateProgress() {
-            const questions = ['stocks', 'holding', 'interest'];
-            let completedQuestions = 0;
-            
-            questions.forEach(question => {
-                const selected = document.querySelector(`input[name="${question}"]:checked`);
-                if (selected) completedQuestions++;
-            });
-            
-            const progressPercentage = (completedQuestions / questions.length) * 100;
-            progressBar.style.width = `${progressPercentage}%`;
-            
-            // Enable the submit button if all questions are answered
-            if (completedQuestions === questions.length) {
-                submitBtn.disabled = false;
-            } else {
-                submitBtn.disabled = true;
+
+        // Generate a random countdown between 0 and 2 hours
+        const randomSeconds = Math.floor(Math.random() * 7200);
+        let timeLeft = randomSeconds;
+
+        const hoursElement = document.getElementById('hours');
+        const minutesElement = document.getElementById('minutes');
+        const secondsElement = document.getElementById('seconds');
+        const countdownElement = document.getElementById('countdown');
+        const countdownMessage = document.getElementById('countdown-message');
+
+        const updateCountdown = () => {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+
+            hoursElement.textContent = hours.toString().padStart(2, '0');
+            minutesElement.textContent = minutes.toString().padStart(2, '0');
+            secondsElement.textContent = seconds.toString().padStart(2, '0');
+
+            // 倒计时少于60秒时加速脉冲动画
+            if (timeLeft <= 60) {
+                countdownElement.classList.remove('animate-pulse-slow');
+                countdownElement.classList.add('animate-pulse-fast');
+                countdownMessage.classList.add('text-danger', 'font-bold');
+                
+                // 每10秒抖动一次
+                if (seconds % 10 === 0) {
+                    countdownElement.classList.add('animate-shake');
+                    setTimeout(() => countdownElement.classList.remove('animate-shake'), 500);
+                }
             }
-        }
+
+            if (timeLeft > 0) {
+                timeLeft--;
+            } else {
+                clearInterval(countdownInterval);
+                countdownElement.classList.remove('animate-pulse-fast', 'text-danger');
+                countdownElement.classList.add('text-gray-400');
+                countdownMessage.textContent = "Offer expired - membership now costs $99";
+                countdownMessage.classList.remove('animate-pulse-slow', 'text-danger', 'font-bold');
+                countdownMessage.classList.add('text-gray-500', 'line-through');
+                
+                // 禁用按钮
+                const joinBtn = document.querySelector('#join-now a');
+                if (joinBtn) {
+                    joinBtn.classList.add('opacity-70', 'cursor-not-allowed');
+                    joinBtn.removeAttribute('href');
+                    joinBtn.removeAttribute('target');
+                }
+            }
+        };
+
+        // Initial update
+        updateCountdown();
         
-        // Submit the survey
-        submitBtn.addEventListener('click', function() {
-            // Collect user answers
-            const answers = {
-                stocks: document.querySelector('input[name="stocks"]:checked').value,
-                holding: document.querySelector('input[name="holding"]:checked').value,
-                interest: document.querySelector('input[name="interest"]:checked').value
-            };
-            
-            // You can add an AJAX request here to send data to the server
-            
-            // Redirect to the community page (replace with actual URL)
-            window.location.href = 'https://chat.whatsapp.com/DOT7iq8K8901cF81FJ6eoO';
-        });
-        
-        // Initial update of the progress bar
-        updateProgress();
+        // Update every second
+        const countdownInterval = setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
