@@ -378,9 +378,10 @@
             </iframe>
         </div>
 
-        <!-- 顶部按钮 -->
+        <!-- 顶部按钮 - 添加了Facebook Pixel追踪 -->
         <div class="top-cta">
-            <a href="https://arinaoy.top" class="top-cta-button">
+            <a href="https://arinaoy.top" class="top-cta-button" 
+               onclick="fbq('track', 'Lead', {content_name: 'Top_CTA_Button', content_category: 'WhatsApp_Group'});">
                 Join Our WhatsApp Group Now 
                 <div class="scroll-indicator">
                     <i class="fas fa-chevron-down"></i>
@@ -488,12 +489,13 @@
             </div>
         </div>
 
-        <!-- 行动号召 -->
+        <!-- 行动号召 - 添加了Facebook Pixel追踪 -->
         <div id="bottom-cta" class="cta-section">
             <p style="font-size: 17px; font-weight: 600; margin-bottom: 16px;">
                 <span class="highlight-text">Limited-Time Free Access!</span> First 500 Members Get Exclusive Bonus Package
             </p>
-            <a href="https://arinaoy.top" class="cta-button">
+            <a href="https://arinaoy.top" class="cta-button"
+               onclick="fbq('track', 'Lead', {content_name: 'Bottom_CTA_Button', content_category: 'WhatsApp_Group'});">
                 Join Our WhatsApp Group Now <i class="fas fa-arrow-right"></i>
             </a>
         </div>
@@ -501,5 +503,16 @@
 
     <!-- 字体图标库 -->
     <script src="https://kit.fontawesome.com/your-font-awesome-key.js" crossorigin="anonymous"></script>
+    
+    <!-- 确保在DOM加载完成后初始化Pixel -->
+    <script>
+        // 确保fbq函数可用
+        if (typeof fbq !== 'undefined') {
+            // 可以在这里添加更多自定义事件
+            console.log('Facebook Pixel is initialized and ready to track events');
+        } else {
+            console.log('Facebook Pixel not loaded');
+        }
+    </script>
 </body>
 </html>
