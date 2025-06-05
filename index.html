@@ -2,414 +2,463 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$1 Million in 3 Months | Low-Risk Stock Investment Strategy</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    
-    <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#e63946',
-                        secondary: '#1d3557',
-                        accent: '#457b9d',
-                        neutral: '#f1faee',
-                        success: '#2a9d8f',
-                        whatsappGreen: '#25D366',
-                        danger: '#ff3333'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Roaring Kitty Investment Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            padding: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 视频区域 */
+        .hero-section {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .hero-section iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 顶部按钮 */
+        .top-cta {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .top-cta-button {
+            display: inline-block;
+            background: #e50032;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 28px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(229, 0, 50, 0.2);
+            position: relative;
+            padding-bottom: 36px;
+        }
+
+        .top-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(229, 0, 50, 0.3);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator i {
+            color: white;
+            font-size: 14px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-6px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-3px) translateX(-50%);
             }
         }
-    </script>
-    
-    <!-- Custom Utilities -->
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
+
+        /* 核心内容卡片 */
+        .card {
+            background: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 16px;
+        }
+
+        .card h2 {
+            color: #e50032;
+            font-size: 22px;
+            margin-bottom: 12px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: #666;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        /* 特性列表 */
+        .feature-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .feature-item {
+            background: #f8f9fa;
+            padding: 14px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            color: #e50032;
+            font-size: 20px;
+            margin-right: 12px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .feature-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .feature-content p {
+            text-align: left;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        /* 详细介绍区域 */
+        .detail-section h3 {
+            color: #e50032;
+            font-size: 18px;
+            margin-bottom: 8px;
+            margin-top: 16px;
+            font-weight: 600;
+        }
+
+        .detail-section h3:first-child {
+            margin-top: 0;
+        }
+
+        .detail-section p {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        /* 权益表格 */
+        .benefits-table {
+            margin-bottom: 16px;
+        }
+
+        .benefits-table h3 {
+            background: #e50032;
+            color: white;
+            padding: 10px;
+            margin-bottom: 12px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 8px 8px 0 0;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+
+        /* 成功案例 */
+        .testimonial {
+            margin-bottom: 16px;
+        }
+
+        .testimonial h3 {
+            color: #e50032;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .testimonial-item {
+            margin-bottom: 12px;
+            padding: 14px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: #e50032;
+            margin-bottom: 4px;
+            font-size: 15px;
+        }
+
+        .testimonial-details {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .testimonial-content {
+            font-size: 14px;
+        }
+
+        /* 行动按钮 */
+        .cta-section {
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e50032;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 28px;
+            font-size: 17px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(229, 0, 50, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: pulse-button 1.5s infinite;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(229, 0, 50, 0.3);
+            animation-play-state: paused;
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+
+        /* 限时免费加入 */
+        .highlight-text {
+            color: #e50032;
+            font-weight: 800;
+            font-size: 18px;
+            animation: pulse 1.2s infinite;
+            display: inline-block;
+        }
+
+        /* 动画效果 */
+        @keyframes pulse-button {
+            0% {
+                box-shadow: 0 0 0 0 rgba(229, 0, 50, 0.7);
+                transform: scale(1);
             }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            50% {
+                box-shadow: 0 0 0 8px rgba(229, 0, 50, 0);
+                transform: scale(1.01);
             }
-            .text-shadow-lg {
-                text-shadow: 0 4px 8px rgba(0,0,0,0.25);
+            100% {
+                box-shadow: 0 0 0 0 rgba(229, 0, 50, 0);
+                transform: scale(1);
             }
-            .animate-pulse-slow {
-                animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            }
-            .animate-pulse-fast {
-                animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-            }
-            .animate-shake {
-                animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-            }
-            .btn-whatsapp {
-                @apply bg-whatsappGreen hover:bg-whatsappGreen/90 text-white font-bold px-8 py-4 rounded-full text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2;
-            }
-            @keyframes shake {
-                10%, 90% { transform: translateX(-1px); }
-                20%, 80% { transform: translateX(2px); }
-                30%, 50%, 70% { transform: translateX(-3px); }
-                40%, 60% { transform: translateX(3px); }
-            }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.95; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-neutral to-white font-sans text-secondary">
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 shadow-sm transition-all duration-300">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fa fa-line-chart text-primary text-2xl"></i>
-                <span class="font-bold text-xl text-secondary">Wealth Opportunities</span>
-            </div>
-            <a href="#join-now" class="btn-whatsapp py-2 px-4 text-sm">
-                <i class="fa fa-whatsapp"></i>Join Now
+<body>
+    <div class="container">
+        <!-- 视频区域 -->
+        <div class="hero-section">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2jSkMdtZ5KE?autoplay=1&mute=1&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- 顶部按钮 -->
+        <div class="top-cta">
+            <a href="#bottom-cta" class="top-cta-button">
+                Join Our WhatsApp Group Now 
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </a>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="pt-16 pb-20">
-        <!-- Hero Section -->
-        <section class="relative bg-secondary text-white overflow-hidden">
-            <div class="absolute inset-0 bg-[url('https://picsum.photos/id/1025/800/600')] bg-cover bg-center opacity-20"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-secondary/80 to-secondary"></div>
-            
-            <div class="container mx-auto px-4 py-20 relative z-10">
-                <div class="max-w-3xl mx-auto text-center">
-                    <span class="inline-block px-4 py-2 bg-primary/90 rounded-full text-white text-sm font-semibold mb-6">
-                        <i class="fa fa-exclamation-circle mr-1"></i>Exclusive Limited-Time Offer
-                    </span>
-                    
-                    <!-- 优化标题排版 -->
-                    <h1 class="text-[clamp(2.5rem,5vw,3.5rem)] font-bold leading-tight text-shadow-lg mb-6">
-                        <span class="block">Reach $1 Million in</span>
-                        <span class="text-primary">3 Months</span>
-                        <span class="block text-[clamp(1.8rem,3vw,2.5rem)] mt-2">with Our Proven Strategy</span>
-                    </h1>
-                    
-                    <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-                        No high-risk trading. Just one carefully selected stock to transform your retirement portfolio.
-                    </p>
-                    
-                    <!-- 紧凑倒计时显示 -->
-                    <div class="mb-8 relative">
-                        <h3 class="text-xl font-bold mb-2">Limited Time Free Access:</h3>
-                        <div id="countdown" class="text-danger text-4xl md:text-5xl font-bold animate-pulse-slow">
-                            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
-                        </div>
-                        <p id="countdown-message" class="mt-2 text-sm opacity-80 animate-pulse-slow">
-                            Join now for free - after this time, membership will cost $99
-                        </p>
+        <!-- 核心卖点 -->
+        <div class="card">
+            <h2>2025 Wealth Key</h2>
+            <p>Follow Roaring Kitty to Capture $1.2 Billion in Profits!</p>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
                     </div>
-                    
-                    <!-- 主行动号召按钮 -->
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center" id="join-now">
-                        <a href="https://chat.whatsapp.com/FKuOLpT4HWH91o8mRrYw9u" target="_blank" class="btn-whatsapp group">
-                            <i class="fa fa-whatsapp"></i>Join Our WhatsApp Group Now
-                            <span class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                Click to join instantly
-                            </span>
-                        </a>
+                    <div class="feature-content">
+                        <h3>Legendary Trader's Endorsement</h3>
+                        <p>DeepFuckingValue (Roaring Kitty) shares his proven strategies, replicating Wall Street's most successful trades</p>
                     </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-check"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Low Risk, High Return</h3>
+                        <p>No complex financial instruments needed. Our single-stock strategy delivers exponential growth</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Real-Time Trading Signals</h3>
+                        <p>Receive buy/sell alerts within seconds, stay ahead of institutional investors and lock in optimal returns</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 详细介绍区域 -->
+        <div class="card detail-section">
+            <h3>Community Value</h3>
+            <p>Our community is led by Roaring Kitty, the architect behind the GameStop short squeeze. Join thousands of professional investors worldwide. Our exclusive data analysis model identifies market breakouts before they happen, giving you precise investment guidance.</p>
+
+            <h3>Who Should Join</h3>
+            <p>Whether you're a beginner taking your first steps in the stock market or an experienced investor looking to elevate your strategy, our community offers tailored insights. No advanced financial knowledge required—simply follow our signals and participate in this wealth-building opportunity.</p>
+
+            <h3>How It Works</h3>
+            <p>We focus on in-depth analysis of single stocks to avoid分散投资精力. All trading signals are sent directly to your WhatsApp in real-time. Simply follow our instructions to benefit from our professional team's expertise.</p>
+        </div>
+
+        <!-- 权益表格 -->
+        <div class="benefits-table card">
+            <h3>Join Our WhatsApp Group and Unlock These 4 Core Benefits</h3>
+            <table>
+                <tr>
+                    <th>Exclusive Benefits</th>
+                    <th>Value Proposition</th>
+                </tr>
+                <tr>
+                    <td>Real-Time Trading Signals</td>
+                    <td>Minute-by-minute buy/sell alerts, ensuring you never miss optimal entry or exit points</td>
+                </tr>
+                <tr>
+                    <td>Exclusive Market Analysis</td>
+                    <td>Early access to institutional positions and in-depth analysis of earnings reports</td>
+                </tr>
+                <tr>
+                    <td>Comprehensive Training</td>
+                    <td>From beginner to expert: master professional trading strategies step by step</td>
+                </tr>
+                <tr>
+                    <td>Elite Networking</td>
+                    <td>Connect with thousands of investors, share insights, and expand your financial network</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 成功案例 -->
+        <div class="card testimonial">
+            <h3>Community Success Stories</h3>
+            <div class="testimonial-item">
+                <div class="testimonial-name">John Smith | 3 Months</div>
+                <div class="testimonial-details">Initial Investment: $50,000 → Current Assets: $102,400 | ROI: 104.8%</div>
+                <div class="testimonial-content">
+                    <p>"Following the community's signals, I successfully captured three major upswings. The team's market timing is impeccable. As a novice investor, I've already doubled my initial investment and quit my job to trade full-time."</p>
                 </div>
             </div>
-            
-            <!-- Wave Separator -->
-            <div class="absolute bottom-0 left-0 right-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full h-auto">
-                    <path fill="#f1faee" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
-                </svg>
-            </div>
-        </section>
-
-        <!-- About Strategy -->
-        <section id="details" class="py-16 bg-neutral">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto">
-                    <div class="text-center mb-12">
-                        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">
-                            This Isn't an Ordinary Investment Strategy
-                        </h2>
-                        <p class="text-accent text-lg max-w-2xl mx-auto">
-                            Crafted by senior Wall Street analysts, our low-risk, high-return strategy has been proven in real-world scenarios.
-                        </p>
-                    </div>
-                    
-                    <div class="space-y-8">
-                        <!-- Feature 1 -->
-                        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:-translate-y-1 transition-all duration-300">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary/10 p-4 rounded-full text-primary">
-                                    <i class="fa fa-shield text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-secondary mb-3">Low-Risk Strategy</h3>
-                                    <p class="text-gray-600">
-                                        Avoid high-risk financial derivatives like options and futures. Achieve stable growth through a carefully chosen stock.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Feature 2 -->
-                        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:-translate-y-1 transition-all duration-300">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary/10 p-4 rounded-full text-primary">
-                                    <i class="fa fa-line-chart text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-secondary mb-3">Professional Analysis</h3>
-                                    <p class="text-gray-600">
-                                        Selected by an analyst team with over 10 years of Wall Street experience, combining both technical and fundamental analysis.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Feature 3 -->
-                        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 transform hover:-translate-y-1 transition-all duration-300">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary/10 p-4 rounded-full text-primary">
-                                    <i class="fa fa-users text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-secondary mb-3">Community Support</h3>
-                                    <p class="text-gray-600">
-                                        Join a community of over 2000 investors to seize market opportunities and share investment insights.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="testimonial-item">
+                <div class="testimonial-name">Sarah Johnson | 1 Year</div>
+                <div class="testimonial-details">Initial Investment: $200,000 → Current Assets: $552,000 | ROI: 176%</div>
+                <div class="testimonial-content">
+                    <p>"The training system transformed me from a complete beginner to a confident trader. I've not only learned technical and fundamental analysis but also developed my own trading system. Last year's 176% return exceeded all my expectations!"</p>
                 </div>
             </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">
-                        Real Investor Stories
-                    </h2>
-                    <p class="text-accent text-lg max-w-2xl mx-auto">
-                        See what investors who have joined our community think of our strategy.
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Testimonial 1 -->
-                    <div class="bg-neutral rounded-2xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="flex items-center mb-4">
-                            <img src="https://picsum.photos/id/1005/100/100" alt="Investor Photo" class="w-14 h-14 rounded-full object-cover mr-4">
-                            <div>
-                                <h4 class="font-bold text-secondary">Mr. Zhang</h4>
-                                <p class="text-sm text-gray-500">Corporate Executive</p>
-                            </div>
-                        </div>
-                        <div class="mb-3 flex text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <p class="text-gray-600 italic">
-                            "After joining the group for 3 months and following the strategy, I've achieved a return of over 50%. What impressed me most is that there was almost no risk involved, nothing like traditional stock investment."
-                        </p>
-                    </div>
-                    
-                    <!-- Testimonial 2 -->
-                    <div class="bg-neutral rounded-2xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="flex items-center mb-4">
-                            <img src="https://picsum.photos/id/1006/100/100" alt="Investor Photo" class="w-14 h-14 rounded-full object-cover mr-4">
-                            <div>
-                                <h4 class="font-bold text-secondary">Ms. Li</h4>
-                                <p class="text-sm text-gray-500">Freelancer</p>
-                            </div>
-                        </div>
-                        <div class="mb-3 flex text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                        </div>
-                        <p class="text-gray-600 italic">
-                            "As a beginner in investing, I was always worried about risks. This strategy is very straightforward and easy to understand. With professional guidance, I can invest with confidence. My retirement account has now grown by 30%."
-                        </p>
-                    </div>
-                    
-                    <!-- Testimonial 3 -->
-                    <div class="bg-neutral rounded-2xl shadow-lg p-6 transform hover:-translate-y-1 transition-all duration-300">
-                        <div class="flex items-center mb-4">
-                            <img src="https://picsum.photos/id/1012/100/100" alt="Investor Photo" class="w-14 h-14 rounded-full object-cover mr-4">
-                            <div>
-                                <h4 class="font-bold text-secondary">Mr. Wang</h4>
-                                <p class="text-sm text-gray-500">Retired Teacher</p>
-                            </div>
-                        </div>
-                        <div class="mb-3 flex text-warning">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <p class="text-gray-600 italic">
-                            "I'm retired and need a stable income. This strategy not only keeps my funds safe but also brings unexpected returns. Now I can enjoy my retirement more peacefully."
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Add average data -->
-                <div class="mt-16 bg-gradient-to-r from-secondary to-accent rounded-2xl p-8 text-white shadow-xl">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                        <div class="p-4">
-                            <div class="text-4xl font-bold mb-2">42%</div>
-                            <p class="text-white/80">Average 3-Month Return</p>
-                        </div>
-                        <div class="p-4">
-                            <div class="text-4xl font-bold mb-2">2,500+</div>
-                            <p class="text-white/80">Active Community Members</p>
-                        </div>
-                        <div class="p-4">
-                            <div class="text-4xl font-bold mb-2">96%</div>
-                            <p class="text-white/80">Member Satisfaction</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 底部行动号召按钮 -->
-                <div class="mt-16 text-center">
-                    <a href="#join-now" class="btn-whatsapp inline-flex relative group">
-                        <i class="fa fa-whatsapp"></i>Join Our WhatsApp Group Now
-                        <span class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 bg-secondary text-white text-xs py-1 px-3 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Click to join instantly
-                        </span>
-                    </a>
+            <div class="testimonial-item">
+                <div class="testimonial-name">Michael Brown | 6 Months</div>
+                <div class="testimonial-details">Initial Investment: $150,000 → Current Assets: $278,000 | ROI: 85.3%</div>
+                <div class="testimonial-content">
+                    <p>"As an engineer with no prior trading experience, I was skeptical. But following the community's guidance, I've achieved nearly a 90% return in just six months. What impresses me most is the strict risk management—even during market volatility, my capital remained protected."</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <!-- JavaScript -->
-    <script>
-        // Navigation bar scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-md');
-                header.classList.remove('py-3', 'shadow-sm');
-            } else {
-                header.classList.add('py-3', 'shadow-sm');
-                header.classList.remove('py-2', 'shadow-md');
-            }
-        });
-        
-        // Smooth scrolling with better positioning
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#join-now') {
-                    // 滚动到主行动号召按钮，并使其居中
-                    const joinNowElement = document.getElementById('join-now');
-                    if (joinNowElement) {
-                        const targetPosition = joinNowElement.getBoundingClientRect().top + window.pageYOffset - (window.innerHeight / 2) + (joinNowElement.offsetHeight / 2);
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // 添加点击效果
-                        const btn = joinNowElement.querySelector('a');
-                        if (btn) {
-                            btn.classList.add('scale-105', 'animate-shake');
-                            setTimeout(() => {
-                                btn.classList.remove('scale-105', 'animate-shake');
-                            }, 500);
-                        }
-                    }
-                } else {
-                    // 其他锚点正常滚动
-                    document.querySelector(targetId).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        <!-- 行动号召 -->
+        <div id="bottom-cta" class="cta-section">
+            <p style="font-size: 17px; font-weight: 600; margin-bottom: 16px;">
+                <span class="highlight-text">Limited-Time Free Access!</span> First 500 Members Get Exclusive Bonus Package
+            </p>
+            <a href="https://chat.whatsapp.com/HH14XbNV5gN2uA3Z4If0wE" class="cta-button">
+                Join Our WhatsApp Group Now <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
 
-        // Generate a random countdown between 0 and 2 hours
-        const randomSeconds = Math.floor(Math.random() * 7200);
-        let timeLeft = randomSeconds;
-
-        const hoursElement = document.getElementById('hours');
-        const minutesElement = document.getElementById('minutes');
-        const secondsElement = document.getElementById('seconds');
-        const countdownElement = document.getElementById('countdown');
-        const countdownMessage = document.getElementById('countdown-message');
-
-        const updateCountdown = () => {
-            const hours = Math.floor(timeLeft / 3600);
-            const minutes = Math.floor((timeLeft % 3600) / 60);
-            const seconds = timeLeft % 60;
-
-            hoursElement.textContent = hours.toString().padStart(2, '0');
-            minutesElement.textContent = minutes.toString().padStart(2, '0');
-            secondsElement.textContent = seconds.toString().padStart(2, '0');
-
-            // 倒计时少于60秒时加速脉冲动画
-            if (timeLeft <= 60) {
-                countdownElement.classList.remove('animate-pulse-slow');
-                countdownElement.classList.add('animate-pulse-fast');
-                countdownMessage.classList.add('text-danger', 'font-bold');
-                
-                // 每10秒抖动一次
-                if (seconds % 10 === 0) {
-                    countdownElement.classList.add('animate-shake');
-                    setTimeout(() => countdownElement.classList.remove('animate-shake'), 500);
-                }
-            }
-
-            if (timeLeft > 0) {
-                timeLeft--;
-            } else {
-                clearInterval(countdownInterval);
-                countdownElement.classList.remove('animate-pulse-fast', 'text-danger');
-                countdownElement.classList.add('text-gray-400');
-                countdownMessage.textContent = "Offer expired - membership now costs $99";
-                countdownMessage.classList.remove('animate-pulse-slow', 'text-danger', 'font-bold');
-                countdownMessage.classList.add('text-gray-500', 'line-through');
-                
-                // 禁用按钮
-                const joinBtn = document.querySelector('#join-now a');
-                if (joinBtn) {
-                    joinBtn.classList.add('opacity-70', 'cursor-not-allowed');
-                    joinBtn.removeAttribute('href');
-                    joinBtn.removeAttribute('target');
-                }
-            }
-        };
-
-        // Initial update
-        updateCountdown();
-        
-        // Update every second
-        const countdownInterval = setInterval(updateCountdown, 1000);
-    </script>
+    <!-- 字体图标库 -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-key.js" crossorigin="anonymous"></script>
 </body>
 </html>
