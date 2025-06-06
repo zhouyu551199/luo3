@@ -80,7 +80,7 @@
             height: 100%;
         }
 
-        /* 顶部按钮 */
+        /* 顶部按钮 - 增强版脉冲动画 */
         .top-cta {
             text-align: center;
             margin-bottom: 24px;
@@ -97,14 +97,16 @@
             font-weight: 600;
             transition: all 0.3s ease;
             width: 100%;
-            box-shadow: 0 4px 12px rgba(229, 0, 50, 0.2);
+            box-shadow: 0 0 0 rgba(229, 0, 50, 0.4);
             position: relative;
             padding-bottom: 36px;
+            animation: pulse 2s infinite;
         }
 
         .top-cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(229, 0, 50, 0.3);
+            animation-play-state: paused;
         }
 
         .scroll-indicator {
@@ -118,6 +120,18 @@
         .scroll-indicator i {
             color: white;
             font-size: 14px;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(229, 0, 50, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(229, 0, 50, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(229, 0, 50, 0);
+            }
         }
 
         @keyframes bounce {
@@ -353,12 +367,6 @@
             }
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.03); opacity: 0.95; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
         @keyframes shine {
             0% { left: -100%; }
             20% { left: 100%; }
@@ -433,7 +441,7 @@
             <p>Whether you're a beginner taking your first steps in the stock market or an experienced investor looking to elevate your strategy, our community offers tailored insights. No advanced financial knowledge required—simply follow our signals and participate in this wealth-building opportunity.</p>
 
             <h3>How It Works</h3>
-            <p>We focus on in-depth analysis of single stocks to avoid分散投资精力. All trading signals are sent directly to your WhatsApp in real-time. Simply follow our instructions to benefit from our professional team's expertise.</p>
+            <p>We focus on in-depth analysis of single stocks to avoid spreading your investment resources too thin. All trading signals are sent directly to your WhatsApp in real-time. Simply follow our instructions to benefit from our professional team's expertise.</p>
         </div>
 
         <!-- 权益表格 -->
